@@ -3,7 +3,7 @@ defmodule Todo.Cache do
 
   def start_link(_) do
     IO.puts("Starting to-do cache.")
-    GenServer.start(__MODULE__, nil, name: __MODULE__)
+    GenServer.start_link(__MODULE__, nil, name: __MODULE__)
   end
 
   def server_process(todo_list_name) do
