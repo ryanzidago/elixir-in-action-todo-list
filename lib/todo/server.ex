@@ -36,7 +36,8 @@ defmodule Todo.Server do
     {
       :reply,
       Todo.List.entries(todo_list, date),
-      {name, todo_list, @expiry_idle_timeout}
+      {name, todo_list},
+      @expiry_idle_timeout
     }
   end
 
